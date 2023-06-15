@@ -1,0 +1,123 @@
+.aliens{
+    margin: 4rem auto 0 auto;
+    padding: 2rem;
+
+    &__title{
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+
+        &__card{
+            width: 70%;
+            height: 100%;
+            background: gray;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 100%;
+            }
+            
+            span{
+                background-color: aqua;
+                clip-path: polygon(100% 0%, -100% 58%, 101% 32%);
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                text-transform: uppercase;
+                transition: .5s;
+                width: 100%;
+                height: 40%;
+                padding: 1rem;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+
+                h2{
+                    transform: rotate(352deg);
+                    font-size: 1.2rem;
+                    margin-top: 1rem;
+                }
+            }
+
+        }
+    }
+}
+
+// media querys
+
+@media screen and (max-width: 1100px) {
+    
+    .aliens{
+
+        &__grid{
+            
+            &__card{
+                margin: 0 auto;
+
+                span{
+
+                    h2{
+                        font-size: 1rem;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    
+    .aliens{
+
+        &__grid{
+            grid-template-columns: 1fr 1fr;
+            
+            &__card{
+                margin: 0 auto;
+
+                span{
+
+                    h2{
+                        font-size: 1rem;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    
+    .aliens{
+
+        &__grid{
+            grid-template-columns: 1fr;
+            
+            &__card{
+                margin: 0 auto;
+                
+                span{
+
+                    h2{
+                        font-size: 1rem;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+

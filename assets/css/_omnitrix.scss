@@ -1,0 +1,92 @@
+
+.omnitrix{
+
+    &__main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 8rem;
+    }
+
+    
+    &__desc{
+        background: $color-primary;
+        width: 100%;
+        padding: 2rem 0;
+
+        h2{
+            text-align: center;
+        }
+    }
+
+    &__button{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: $color-gray;
+        border: 3px solid $color-black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(2);
+        cursor: pointer;
+        margin-top: 6rem;
+
+        span{
+            display: block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: $color-primary;
+            border: 3px solid $color-black;
+            position: relative;
+            overflow: hidden;
+
+            &:hover{
+                background: $color-primary-light;
+            }
+
+            &::after{
+                content: '';
+                display: block;
+                width: 60px;
+                height: 60px;
+                background: $color-gray;
+                clip-path: polygon(50% 50%, 0 100%, 0 0);
+                position: absolute;
+                top: 3px;
+                left: 0;
+            }
+
+            &::before{
+                content: '';
+                display: block;
+                width: 60px;
+                height: 60px;
+                background: $color-gray;
+                clip-path: polygon(50% 50%, 0 100%, 0 0);
+                position: absolute;
+                top: 3px;
+                right: 0;
+                transform: rotateZ(180deg);
+            }
+        }
+    }
+
+    &__name{
+        margin-top: 6rem;
+    }
+
+    &__alien{
+
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        video{
+            width: 60%;
+        }
+    }
+
+}
